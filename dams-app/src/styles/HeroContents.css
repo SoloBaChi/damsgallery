@@ -1,0 +1,10 @@
+.site-caption h2 {
+  font-weight: 400;
+  font-size: 3.125rem;
+  text-align: left;
+}
+.site-caption h1 {
+  font-weight: 700;
+  font-size: 7.1875rem;
+  text-transform: uppercase;
+}
