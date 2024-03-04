@@ -1,0 +1,65 @@
+/* FOOTER STYLES */
+.footer-container {
+  background: #2a2b2a;
+  color: #fff;
+}
+.footer-container .grid-item .company-name {
+  font-weight: 700;
+  color: #ef5533;
+}
+.footer-container .grid-3 > * {
+  margin-bottom: 1.4rem;
+}
+.footer-container .grid-item > a:not(.company-name) {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.footer-container .grid-item a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+.footer-container .copywright-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.footer-container form .form-field {
+  /* border: 2px solid orange; */
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 1.4rem;
+  width: 80%;
+}
+.footer-arrow-container {
+  position: absolute;
+  right: calc(0px + 10px);
+  top: 50%;
+  transform: translate(0%, -50%);
+  /* width: 48px; */
+  /* line-height: 40px; */
+  background-color: #ef5533;
+  border-radius: 5px;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+/* DESKTOP DEVICE */
+@media (min-width: 980px) {
+  .footer-container .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  .footer-container .grid-3 > * {
+    margin-bottom: 0;
+  }
+  .footer-container .copywright-section {
+    flex-direction: row;
+  }
+}
+
+/* LARGE DESKTOP DEVICE */
+@media (min-width: 1200px) {
+}
