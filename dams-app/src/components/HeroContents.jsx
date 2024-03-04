@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/HeroContents.css";
 
@@ -24,10 +25,10 @@ function HeroContents(props) {
           </p>
           <div className="cta-btns">
             <button>
-              <a href="">art work</a>
+              <Link to="/artworks">art work</Link>
             </button>
             <button>
-              <a href="">artists</a>
+              <Link to="/artists">artists</Link>
             </button>
           </div>
         </div>

@@ -1,12 +1,10 @@
 import React from "react";
-
+import NavBar from "./NavBar";
 function Header(props) {
   return (
-    <section>
-      <header>
-        <h1>This is the site header</h1>
-      </header>
-    </section>
+    <header>
+      <NavBar />
+    </header>
   );
 }
 

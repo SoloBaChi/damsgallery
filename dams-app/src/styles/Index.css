@@ -32,6 +32,7 @@ a {
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 section {
   padding: 1.5rem 5%;
@@ -49,17 +50,21 @@ h6 {
 h2 {
   text-align: center;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 h3 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 h6 {
   font-size: 0.875rem;
   font-weight: 500;
   text-align: center;
+}
+h5 {
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 /* FORM ELEMENT STYLING */
@@ -74,6 +79,14 @@ form .form-field input {
   border: none;
   box-shadow: none;
   outline: none;
+}
+
+/* ICONS STYLES */
+.nav-icon {
+  width: 25.75px;
+  height: 25.75px;
+  /* display: inline-block; */
+  cursor: pointer;
 }
 
 /* FOR FLEXED ITEMS */
@@ -91,6 +104,18 @@ form .form-field input {
 
 /* DESKTOP SCREEN */
 @media (min-width: 980px) {
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
   section {
     padding: 1.5rem 8%;
   }

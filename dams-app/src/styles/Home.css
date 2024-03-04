@@ -1,0 +1,18 @@
+/* HOME STYLES */
+.home-page {
+  position: relative;
+}
+
+/* DESKTOP SCREEN */
+@media (min-width: 980px) {
+  .home-page::before {
+    content: url("../../public/assets/dams-gallery-text.svg");
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+}
