@@ -1,16 +1,20 @@
 .hero-section .site-caption h2 {
   font-weight: 400;
   /* font-size: 3.125rem; */
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: left;
 }
 .hero-section .site-caption h1 {
   font-weight: 700;
   /* font-size: 7.1875rem; */
-  font-size: 4.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
+  text-align: left;
 }
 
+.hero-section h5 {
+  text-align: left;
+}
 .hero-section .cta-btns {
   display: flex;
   flex-flow: row wrap;

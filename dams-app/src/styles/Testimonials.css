@@ -1,0 +1,9 @@
+/* TESTIMONIALS STYLES */
+.flex-container-2 .testimonial-card {
+  text-align: center;
+}
+.flex-container-2 .testimonial-card .img-container {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
