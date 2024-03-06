@@ -5,7 +5,7 @@ function SeeMore(props) {
   return (
     <section>
       <div className="see-more">
-        <Link to="/">see more</Link>
+        <Link to="/artworks">see more</Link>
       </div>
     </section>
   );

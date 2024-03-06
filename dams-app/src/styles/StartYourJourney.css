@@ -1,0 +1,37 @@
+/* YOUR JOUNEY STYLES */
+.your-journey .flex-container-2 {
+  align-items: baseline;
+  margin-top: 4rem;
+}
+.your-journey .flex-container-2 .img-container {
+  height: 398px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.your-journey .flex-container-2 .img-container::before {
+  content: "";
+  display: inline-block;
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ece5d8;
+  z-index: -1;
+}
+
+.your-journey .flex-container-2 .img-container img {
+  max-width: fit-content;
+  max-height: 100%;
+  margin: auto;
+}
+.your-journey .flex-container-2 .fig-caption {
+  text-align: center;
+  margin: 2rem 0rem 4rem 0rem;
+  padding: 1rem;
+}
+.your-journey .flex-container-2 .fig-caption h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}

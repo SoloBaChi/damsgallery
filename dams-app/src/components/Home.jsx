@@ -4,6 +4,7 @@ import HeroContents from "./HeroContents";
 import StartYourJourney from "./StartYourJourney";
 import Products from "./Products";
 import ConnectWithArtists from "./ConnectWithArtists";
+import Testimonials from "./Testimonials";
 // import Footer from "./Footer";
 import "../styles/Home.css";
 
@@ -15,6 +16,7 @@ function Home(props) {
       <StartYourJourney />
       <Products />
       <ConnectWithArtists />
+      <Testimonials />
       {/* <Footer /> */}
     </div>
   );
