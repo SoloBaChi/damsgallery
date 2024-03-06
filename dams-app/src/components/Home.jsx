@@ -6,6 +6,7 @@ import Products from "./Products";
 import ConnectWithArtists from "./ConnectWithArtists";
 import Testimonials from "./Testimonials";
 // import Footer from "./Footer";
+import Subscribe from "./Subscribe";
 import "../styles/Home.css";
 
 function Home(props) {
@@ -17,6 +18,7 @@ function Home(props) {
       <Products />
       <ConnectWithArtists />
       <Testimonials />
+      <Subscribe />
       {/* <Footer /> */}
     </div>
   );

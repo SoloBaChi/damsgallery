@@ -1,0 +1,42 @@
+/* SUBSCRIBE STYLES */
+.subscribe-section {
+  background: #f9f8f5;
+}
+.subscribe-section h3 {
+  font-size: 1.2rem;
+}
+.subscribe-section h6 {
+  text-align: initial;
+}
+.subscribe-section .form-field {
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.subscribe-section .form-field input {
+  width: 100%;
+  border-radius: inherit;
+  padding: 1.2rem;
+}
+.subscribe-section .form-field .cta-btn button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0%, -50%);
+  padding: 0.8rem 1.1rem;
+  display: block;
+  background: #ef5533;
+  box-shadow: none;
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* DESKTOP SCREEN */
+@media (min-width: 980px) {
+  .subscribe-section h3 {
+    font-size: 1.8rem;
+  }
+}
