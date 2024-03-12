@@ -4,11 +4,16 @@ import { FaUserAlt } from "react-icons/fa";
 import { LiaShoppingCartSolid } from "react-icons/lia";
 import { CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
-import "../styles/NavBar.css";
+// import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 
 function NavBar(props) {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [showUser, setShowUser] = useState(false);
+  const handleShowUser = (e) => {
+    // console.log("Yes");
+    setShowUser((prev) => !prev);
+  };
   const handleToggleMenu = () => {
     setToggleMenu((prev) => !prev);
   };
@@ -16,7 +21,7 @@ function NavBar(props) {
     <nav>
       <section className="nav-section">
         <div className="flex-container-2">
-          <div>
+          <div className="toggle-icon">
             <FiMenu className="nav-icon menu-icon" onClick={handleToggleMenu} />
           </div>
           <div className="logo-container">
@@ -25,12 +30,30 @@ function NavBar(props) {
             </h1>
           </div>
           <div className="nav-icons">
-            <CiSearch className="nav-icon search-icon" />
-            <LiaShoppingCartSolid className="nav-icon cart-icon" />
-            <FaUserAlt className="nav-icon user-icon" />
+            <Link to="/search" className="icon search-icon">
+              <CiSearch className="nav-icon " />
+            </Link>
+            <Link to="/cart" className="icon cart-icon">
+              <LiaShoppingCartSolid className="nav-icon" />
+            </Link>
+            <div className="icon user-icon">
+              <FaUserAlt onClick={handleShowUser} className="nav-icon" />
+              <div className="nested-icon">
+                {showUser && (
+                  <ul className="nested-icon-list">
+                    <li>
+                      <Link to="/register">signup </Link>
+                    </li>
+                    <li>
+                      <Link to="/login">login</Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            </div>
           </div>
           <div className={toggleMenu ? "menu open" : "menu"}>
-            <Menu />
+            <Menu removeToggle={handleToggleMenu} />
           </div>
         </div>
       </section>

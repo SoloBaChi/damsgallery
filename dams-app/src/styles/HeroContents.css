@@ -30,6 +30,8 @@
   font-size: 1.375rem;
   font-weight: 600;
   text-transform: capitalize;
+  background: #f3f0eb;
+  padding: 0rem;
 }
 .hero-section .cta-btns > :first-child {
   background: #ec2a2a;

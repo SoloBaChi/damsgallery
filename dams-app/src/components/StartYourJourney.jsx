@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/StartYourJourney.css";
+// import "../styles/StartYourJourney.css";
 
 function StartYourJourney(props) {
   return (

@@ -1,0 +1,51 @@
+/* Styles Written for Login and Signup */
+.auth-section {
+  /* border: 1px solid red; */
+  /* display: flex; */
+}
+.auth-section h2 {
+  color: #e85332;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: initial;
+}
+.auth-section form .form-field {
+  border-radius: 25px;
+}
+.auth-section .show-password {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  transform: translate(0%, 50%);
+  display: block;
+  cursor: pointer;
+  padding: 0.7rem;
+}
+.auth-section form .form-field input {
+  border-radius: inherit;
+  padding: 0.85rem;
+}
+.auth-section form button {
+  width: 120px;
+  margin: 2rem auto;
+}
+.auth-section .auth-form-container {
+  border: 1px solid teal;
+  border: 1px solid #878787;
+  border-radius: 35px;
+  padding: 1.4rem;
+}
+.auth-section form a {
+  display: inline-block;
+  color: #e85332;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* DESKTOP DEVICE */
+@media (min-width: 980px) {
+  .auth-section form button {
+    margin: initial;
+    margin-bottom: 2rem;
+  }
+}

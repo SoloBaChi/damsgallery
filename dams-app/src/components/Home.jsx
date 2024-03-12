@@ -5,20 +5,22 @@ import StartYourJourney from "./StartYourJourney";
 import Products from "./Products";
 import ConnectWithArtists from "./ConnectWithArtists";
 import Testimonials from "./Testimonials";
+import SiteMetrics from "./SiteMetrics";
 // import Footer from "./Footer";
-import Subscribe from "./Subscribe";
-import "../styles/Home.css";
+// import "../styles/Home.css";
 
 function Home(props) {
   return (
     <div className="home-page">
       {/* <Header /> */}
       <HeroContents />
+      <SiteMetrics />
       <StartYourJourney />
-      <Products />
-      <ConnectWithArtists />
-      <Testimonials />
-      <Subscribe />
+      <div className="home-white-bg">
+        <Products />
+        <ConnectWithArtists />
+        <Testimonials />
+      </div>
       {/* <Footer /> */}
     </div>
   );

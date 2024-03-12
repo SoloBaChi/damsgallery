@@ -1,0 +1,77 @@
+/* CONTACT US  STYLES */
+.contactus-section {
+  padding-bottom: 2.4rem;
+}
+.contactus-hero-section {
+  position: relative;
+  height: 269px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.contactus-hero-section::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url("../../public/assets/contact-hero-section.svg") top left/cover
+    no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.contactus-section h2 {
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+}
+.contactus-form-container {
+  border-radius: 35px;
+  padding: 2rem;
+  border: 1px solid #878787;
+  margin-bottom: 2.4rem;
+}
+.contactus-form-container form .form-field {
+  border-radius: 25px;
+  margin-bottom: 1.4rem;
+}
+.contactus-form-container form .form-field input,
+.contactus-form-container form .form-field textarea {
+  border-radius: inherit;
+  background-color: #fff;
+  text-indent: 1.4rem;
+  padding: 0.95rem;
+}
+.contactus-form-container form button {
+  margin: auto;
+  width: 120px;
+}
+.contactus-section .social-media-contacts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.contactus-section .social-media-contacts .icons {
+  display: flex;
+  gap: inherit;
+}
+.contactus-section .social-media-contacts .icons a {
+  padding: initial;
+}
+.contactus-section .social-media-contacts .icon-container {
+  width: 25px;
+  height: 25px;
+}
+
+/* ////////////////////////////////////
+ */
+/* DESKTOP DEVICE */
+
+@media (min-width: 980px) {
+  .contactus-form-container {
+    width: 600px;
+    margin: 2.4rem auto;
+  }
+}

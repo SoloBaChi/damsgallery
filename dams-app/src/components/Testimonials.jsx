@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./shared/Card";
-import "../styles/Testimonials.css";
+// import "../styles/Testimonials.css";
 
 function Testimonials(props) {
   return (
-    <section className="testimonial">
+    <section className="testimonial-section">
       <h6>testimonials</h6>
       <h2>What does our customer say?</h2>
       <h5>

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./shared/Card";
 import SeeMore from "./SeeMore";
 
-import "../styles/Products.css";
+// import "../styles/Products.css";
 
 function Products(props) {
   return (

@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "./shared/Card";
+// import "../styles/Artists.css";
 
 function ConnectWithArtists(props) {
   return (
-    <section className="connect-section">
+    <section className="artists-section">
       <h2>connect with artist</h2>
       <h6 className="section-title">
         Dive deeper into the creative process by exploring artist profiles

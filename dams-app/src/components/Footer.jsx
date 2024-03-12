@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Footer.css";
+// import "../styles/Footer.css";
 import FooterCtaButton from "./FooterCtaButton";
 
 function Footer(props) {
   return (
     <footer className="footer-container">
-      <section>
+      <section className="footer-section">
         <nav className="footer-nav">
           <ul className="grid-3">
             <li className="grid-item">
@@ -44,13 +44,19 @@ function Footer(props) {
               <Link to="/">social</Link>
               <ul>
                 <li>
-                  <Link to="/twitter">twitter</Link>
+                  <Link to="https://twitter.com/" target="_blank">
+                    twitter
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/facebook">facebook</Link>
+                  <Link to="https://www.facebook.com/" target="_blank">
+                    facebook
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/instagram">instagram</Link>
+                  <Link to="https://www.instagram.com/" target="_blank">
+                    instagram
+                  </Link>
                 </li>
                 <li>
                   <Link to="/linkedIn">linkedIn</Link>
