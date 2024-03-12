@@ -2,6 +2,9 @@
 .home-page {
   position: relative;
 }
+.home-page .home-white-bg {
+  background: #fff;
+}
 
 /* DESKTOP SCREEN */
 @media (min-width: 980px) {

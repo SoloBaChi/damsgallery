@@ -1,24 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Menu(props) {
+function Menu({ removeToggle }) {
   return (
     <div className="navbar-menu">
       <ul className="menu-list">
         <li>
-          <Link to="/">home</Link>
+          <Link to="/" onClick={removeToggle}>
+            home
+          </Link>
         </li>
         <li>
-          <Link to="/artworks">art work</Link>
+          <Link to="/artworks" onClick={removeToggle}>
+            art work
+          </Link>
         </li>
         <li>
-          <Link to="/artists">artist</Link>
+          <Link to="/artists" onClick={removeToggle}>
+            artist
+          </Link>
         </li>
         <li>
-          <Link to="/">about us</Link>
+          <Link to="/aboutus" onClick={removeToggle}>
+            about us
+          </Link>
         </li>
         <li>
-          <Link to="/">contact us</Link>
+          <Link to="/contactus" onClick={removeToggle}>
+            contact us
+          </Link>
         </li>
       </ul>
     </div>

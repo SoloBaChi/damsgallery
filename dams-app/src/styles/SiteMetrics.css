@@ -1,0 +1,23 @@
+/* SITE METRICS STYLES */
+.metrics-section h2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0.5rem 0rem;
+}
+.metrics-section .grid-container-3 {
+  /* border: 1px solid red; */
+}
+
+/* DESKTOP SCREEN */
+@media (min-width: 980px) {
+  .metrics-section .grid-container-3 > * {
+    border-right: 2px solid #b5b5b5;
+    /* padding: 2rem; */
+  }
+  .metrics-section .grid-container-3 > *:last-child {
+    border-right: none;
+  }
+}
+/* .metrics-section .grid-container-3{
+
+} */
