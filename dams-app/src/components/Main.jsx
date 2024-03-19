@@ -13,6 +13,7 @@ import Register from "./Register";
 import Footer from "./Footer";
 import Cart from "./Cart";
 import SearchPage from "./SearchPage";
+import AccountActivation from "./AccountActivation";
 
 const Main = (props) => {
   return (
@@ -30,6 +31,7 @@ const Main = (props) => {
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/activated-account" element={<AccountActivation />} />
         </Routes>
         <Subscribe />
         <Footer />
