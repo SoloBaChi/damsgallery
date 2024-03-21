@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import Cart from "./Cart";
 import SearchPage from "./SearchPage";
 import AccountActivation from "./AccountActivation";
+import SuccessfulRegistration from "./SuccessfulRegistration";
 
 const Main = (props) => {
   return (
@@ -32,6 +33,10 @@ const Main = (props) => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/activated-account" element={<AccountActivation />} />
+          <Route
+            path="/register-successful"
+            element={<SuccessfulRegistration />}
+          />
         </Routes>
         <Subscribe />
         <Footer />

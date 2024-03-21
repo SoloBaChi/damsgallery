@@ -110,6 +110,27 @@ button {
   cursor: pointer;
 }
 
+/* SPINNER STYLES */
+.spinner {
+  animation: spin 1s linear infinite;
+  /* font-size: 3rem;
+  font-weight: 600;
+  display: inline-block; */
+}
+.spin-container {
+  /* display: block; */
+}
+.spin-container svg {
+  width: 25px;
+  height: 25px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* FORM ELEMENT STYLING */
 form .form-field {
   position: relative;
