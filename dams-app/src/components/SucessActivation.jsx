@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function AccountActivation(props) {
+function SuccessActivation(props) {
   return (
     <section>
       <h3 style={{ color: "green" }}>
@@ -19,4 +19,4 @@ function AccountActivation(props) {
   );
 }
 
-export default AccountActivation;
+export default SuccessActivation;
