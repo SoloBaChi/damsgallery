@@ -126,7 +126,7 @@ function Login(props) {
               <div>
                 {/* Return error message*/}
                 {user.status === "success" ? (
-                  navigate("/dashboard")
+                  navigate("/")
                 ) : (
                   <span style={{ color: "red" }}>{errorMessage}</span>
                 )}

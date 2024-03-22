@@ -8,7 +8,7 @@ function SuccessfulRegistration(props) {
         <div className="modal-container">
           <p>Your registration was successful &#128640;</p>
           <span>
-            Please
+            Please verify your account OR
             <span className="login_signup">
               <Link to="/login">login</Link>
             </span>
