@@ -45,7 +45,7 @@ const Main = (props) => {
             element={<AccountVerification />}
           />
           {/* <Route path=":activationId" ele/> */}
-          <Route path="/dasboard" element={<Dashborad />} />
+          <Route path="/dashboard" element={<Dashborad />} />
           <Route path="/upload-details" element={<AdminUpload />} />
         </Routes>
         <Subscribe />
