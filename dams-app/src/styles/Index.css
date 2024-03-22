@@ -121,14 +121,30 @@ button {
   /* display: block; */
 }
 .spin-container svg {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* MODAL MESSAGE */
+.message-modal {
+  display: flex;
+}
+.modal-container {
+  width: 80vw;
+  box-shadow: var(--box-shadow-1);
+  padding: 1rem;
+  margin: auto;
+}
+.message-modal p {
+  color: rgb(0, 128, 0);
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /* FORM ELEMENT STYLING */
