@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Menu({ removeToggle }) {
+  // Get the token from the local
   return (
     <div className="navbar-menu">
       <ul className="menu-list">

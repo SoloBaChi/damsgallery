@@ -20,10 +20,12 @@ import AdminUpload from "./AdminUpload";
 import SuccessActivation from "./SucessActivation";
 
 const Main = (props) => {
+  const token = localStorage.getItem("authToken");
+  // console.log(`Home: token ${token}`);
   return (
     <>
       <Router>
-        <Header />
+        <Header renderedToken={token} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
