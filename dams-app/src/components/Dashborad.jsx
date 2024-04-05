@@ -1,12 +1,12 @@
 import React from "react";
 
 function Dashborad(props) {
-  const token = localStorage.getItem("authToken");
-  console.log(token);
+  // const token = localStorage.getItem("authToken");
+  // console.log(token);
   return (
-    <div>
+    <section>
       <h1>Welcome to my dashboard</h1>
-    </div>
+    </section>
   );
 }
 

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LoadingSpinner from "./shared/LoadingSpinner";
 // import "../styles/Auth.css";
+
 function Login(props) {
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -11,7 +12,9 @@ function Login(props) {
     email: "",
     password: "",
   });
-  // Set the  location and History state
+
+  ////////////
+  /////////Set the  location and History state
   const navigate = useNavigate();
 
   ////////////////////
@@ -22,11 +25,16 @@ function Login(props) {
     setToken(token);
   };
 
+  // just checking
+  useEffect(() => {
+    saveToken(token);
+  }, [token]);
+
   // For Logout
-  const removeToken = () => {
-    localStorage.removeItem("authToken");
-    setToken(null);
-  };
+  // const removeToken = () => {
+  //   localStorage.removeItem("authToken");
+  //   setToken(null);
+  // };
 
   // Hadle user token
   const handleUserToken = (userObj) => {
@@ -126,7 +134,7 @@ function Login(props) {
               <div>
                 {/* Return error message*/}
                 {user.status === "success" ? (
-                  navigate("/")
+                  navigate("/products", { replace: true })
                 ) : (
                   <span style={{ color: "red" }}>{errorMessage}</span>
                 )}

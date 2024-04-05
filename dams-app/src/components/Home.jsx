@@ -10,6 +10,7 @@ import SiteMetrics from "./SiteMetrics";
 // import "../styles/Home.css";
 
 function Home(props) {
+  // Get token from the local storage
   return (
     <div className="home-page">
       {/* <Header /> */}

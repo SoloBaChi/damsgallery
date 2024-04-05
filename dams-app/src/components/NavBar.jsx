@@ -8,15 +8,26 @@ import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function NavBar(props) {
+  // Get the Token from local storage
+  const userToken = localStorage.getItem("authToken");
+
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showUser, setShowUser] = useState(false);
+  const [token, setToken] = useState(userToken);
+
   const handleShowUser = (e) => {
-    // console.log("Yes");
     setShowUser((prev) => !prev);
   };
   const handleToggleMenu = () => {
     setToggleMenu((prev) => !prev);
   };
+
+  // Handle Logout
+  const removeToken = () => {
+    localStorage.removeItem("authToken");
+    setToken(null);
+  };
+
   return (
     <nav>
       <section className="nav-section">
@@ -36,7 +47,7 @@ function NavBar(props) {
             <Link to="/cart" className="icon cart-icon">
               <LiaShoppingCartSolid className="nav-icon" />
             </Link>
-            <div className="icon user-icon">
+            <div className={!token ? "icon user-icon" : "user-icon active"}>
               <FaUserAlt onClick={handleShowUser} className="nav-icon" />
               <div className="nested-icon">
                 {showUser && (
@@ -45,7 +56,13 @@ function NavBar(props) {
                       <Link to="/register">signup </Link>
                     </li>
                     <li>
-                      <Link to="/login">login</Link>
+                      {token ? (
+                        <Link to="/login" onClick={removeToken}>
+                          logout
+                        </Link>
+                      ) : (
+                        <Link to="/login">login</Link>
+                      )}
                     </li>
                   </ul>
                 )}

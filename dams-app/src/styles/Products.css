@@ -18,3 +18,13 @@
   font-size: 1.5rem;
   text-align: center;
 }
+
+/* DISPLAY PRODUCTS STYLES */
+.product-section.display-product .card {
+  width: 280px;
+  margin: auto;
+}
+
+.product-section.display-product .cta-btn-container {
+  text-align: center;
+}

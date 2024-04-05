@@ -1,9 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar";
-function Header(props) {
+function Header({ renderedToken }) {
+  // console.log(`header ${renderedToken}`);
   return (
     <header>
-      <NavBar />
+      <NavBar token={renderedToken} />
     </header>
   );
 }
