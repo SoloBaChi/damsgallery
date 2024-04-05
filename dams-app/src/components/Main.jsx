@@ -1,5 +1,4 @@
 import React from "react";
-import Products from "./Products";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Header from "./Header";
@@ -18,6 +17,9 @@ import Dashborad from "./Dashborad";
 import AccountVerification from "./AccountVerification";
 import AdminUpload from "./AdminUpload";
 import SuccessActivation from "./SucessActivation";
+import Products from "./Products";
+import DisplayProduct from "./DisplayProduct";
+import { ProductsData } from "./shared/data/data";
 
 const Main = (props) => {
   const token = localStorage.getItem("authToken");
@@ -27,9 +29,13 @@ const Main = (props) => {
       <Router>
         <Header renderedToken={token} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/artworks" element={<ArtWork />} />
+          <Route path="/" element={<Home data={ProductsData} />} />
+          <Route path="products" element={<Products />} />
+          <Route path="/products/:productId" element={<DisplayProduct />} />
+          <Route
+            path="/artworks"
+            element={<ArtWork artWorks={ProductsData} />}
+          />
           <Route path="/artists" element={<Artists />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/aboutus" element={<AboutUs />} />

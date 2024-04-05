@@ -100,7 +100,7 @@ h5 {
 }
 button {
   padding: 0.8rem 1.2rem;
-  display: block;
+  display: inline-block;
   background: #ef5533;
   box-shadow: none;
   border: none;
