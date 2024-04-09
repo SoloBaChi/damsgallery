@@ -14,7 +14,7 @@ function AboutUs(props) {
             </p>
           </div>
           <div className="img-container">
-            <img src={`/assets/aboutus-image-banner.svg`} alt="aboutus image" />
+            <img src={`/assets/aboutus-image-banner.svg`} alt="aboutus" />
           </div>
         </div>
         <p>

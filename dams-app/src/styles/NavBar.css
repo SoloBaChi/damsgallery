@@ -65,12 +65,31 @@
 .nav-section .user-icon {
   position: relative;
 }
+
 .nav-section .nested-icon-list {
   position: absolute;
   top: 100%;
   right: calc(100% - 1.6rem);
   background-color: #f3f0eb;
   z-index: 1020;
+}
+
+/* ===============cart styles========== */
+.nav-section .cart-icon {
+  position: relative;
+}
+.nav-section .cart-icon .cart-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  line-height: 18px;
+  color: #fff;
+  background-color: #ef5533;
+  text-align: center;
 }
 /* DESKTOP SCREEN */
 @media (min-width: 980px) {

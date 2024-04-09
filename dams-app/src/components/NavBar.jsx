@@ -7,7 +7,7 @@ import { FiMenu } from "react-icons/fi";
 // import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 
-function NavBar(props) {
+function NavBar({ cartItem }) {
   // Get the Token from local storage
   const userToken = localStorage.getItem("authToken");
 
@@ -46,6 +46,9 @@ function NavBar(props) {
             </Link>
             <Link to="/cart" className="icon cart-icon">
               <LiaShoppingCartSolid className="nav-icon" />
+              {cartItem.length > 0 && (
+                <span className="cart-count">{cartItem.length}</span>
+              )}
             </Link>
             <div className={!token ? "icon user-icon" : "user-icon active"}>
               <FaUserAlt onClick={handleShowUser} className="nav-icon" />
