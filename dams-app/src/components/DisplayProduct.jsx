@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Card from "./shared/Card";
 import { ProductsData } from "./shared/data/data";
 import { useNavigate } from "react-router-dom";
+import ProductCard from "./shared/ProductCard";
 
 function DisplayProduct({ addToCart, removeFromCart, decreaseQuantiy }) {
   const { productId } = useParams();
@@ -13,7 +13,7 @@ function DisplayProduct({ addToCart, removeFromCart, decreaseQuantiy }) {
     <section className="product-section display-product">
       {selectedProduct.map((product) => (
         <div key={product.id}>
-          <Card {...product} />
+          <ProductCard {...product} />
           <h6>you have selected the product {product.title}</h6>
           <div className="cta-btn-container">
             <button

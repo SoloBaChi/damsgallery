@@ -1,7 +1,6 @@
 import React from "react";
-import "../../styles/Card.css";
 
-const Card = ({ className, imgSrc, description, title, price }) => {
+function ProductCard({ className, imgSrc, description, title, price }) {
   return (
     <div className={`card  ${className}`}>
       <div className="card-header img-container">
@@ -11,8 +10,11 @@ const Card = ({ className, imgSrc, description, title, price }) => {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
+      <div className="card-footer">
+        <h3> $ {price}</h3>
+      </div>
     </div>
   );
-};
+}
 
-export default Card;
+export default ProductCard;
