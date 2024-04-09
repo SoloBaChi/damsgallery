@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "./shared/Card";
 import SeeMore from "./SeeMore";
 import { useNavigate } from "react-router-dom";
 import { ProductsData } from "./shared/data/data";
+import ProductCard from "./shared/ProductCard";
 
 // import "../styles/Products.css";
 function Products(props) {
@@ -19,7 +19,7 @@ function Products(props) {
               navigate(`/products/${product.id}`);
             }}
           >
-            <Card {...product} />
+            <ProductCard {...product} />
           </div>
         ))}
       </div>
