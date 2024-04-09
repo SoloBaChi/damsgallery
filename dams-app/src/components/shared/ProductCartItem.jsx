@@ -1,7 +1,13 @@
 import React from "react";
-import "../../styles/Card.css";
 
-const Card = ({ className, imgSrc, description, title, price }) => {
+function ProductCartItem({
+  className,
+  imgSrc,
+  description,
+  title,
+  price,
+  qty,
+}) {
   return (
     <div className={`card  ${className}`}>
       <div className="card-header img-container">
@@ -12,10 +18,12 @@ const Card = ({ className, imgSrc, description, title, price }) => {
         <p>{description}</p>
       </div>
       <div className="card-footer">
-        <h3> $ {price}</h3>
+        <h4>
+          Price : ${price}.00 * {qty}
+        </h4>
       </div>
     </div>
   );
-};
+}
 
-export default Card;
+export default ProductCartItem;

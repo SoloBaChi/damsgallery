@@ -3,12 +3,41 @@
   background: #fff;
   /* padding: 2.5rem 0rem; */
 }
-.flex-container-2 .testimonial-card {
+.slider-container .testimonial-card {
   text-align: center;
   box-shadow: 0px 16px 60px 0px #0000000f;
 }
-.flex-container-2 .testimonial-card .img-container {
+.slider-container .testimonial-card .img-container {
   width: 100px;
   height: 100px;
   margin: auto;
+}
+
+/* Note the .slick-slide is a default carousel card */
+.slider-container ul li {
+  border: 2px solid #b8b7b7;
+  border-radius: 50%;
+  padding: 10px;
+}
+.slider-container ul li button {
+  background: transparent !important;
+  color: transparent !important;
+}
+.slider-container ul li button::before {
+  font-size: 15px;
+  color: #ef5533 !important;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+}
+.slider-container .slick-prev,
+.slick-next {
+  display: none !important;
+}
+/* Give margin to the carousel */
+.slider-container .slick-slide > div {
+  /* padding: 0 20px; */
+  margin: 15px;
+  border-radius: 20px;
 }

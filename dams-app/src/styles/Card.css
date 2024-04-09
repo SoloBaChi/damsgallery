@@ -1,8 +1,12 @@
 .card {
   cursor: pointer;
+  box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+  border-radius: 14px;
+  margin-bottom: 4rem;
 }
 
-.card .card-body {
+.card .card-body,
+.card-footer {
   padding: 1.2rem;
 }
 .card .card-body p {
