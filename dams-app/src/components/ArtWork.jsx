@@ -1,10 +1,10 @@
 import React from "react";
 import Products from "./Products";
 
-function ArtWork(props) {
+function ArtWork({ productData }) {
   return (
     <section className="product-section">
-      <Products />
+      <Products productData={productData} />
     </section>
   );
 }

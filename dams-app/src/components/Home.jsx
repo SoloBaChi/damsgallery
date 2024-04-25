@@ -9,7 +9,7 @@ import SiteMetrics from "./SiteMetrics";
 // import Footer from "./Footer";
 // import "../styles/Home.css";
 
-function Home(props) {
+function Home({ productData }) {
   // Get token from the local storage
   return (
     <div className="home-page">
@@ -18,7 +18,7 @@ function Home(props) {
       <SiteMetrics />
       <StartYourJourney />
       <div className="home-white-bg">
-        <Products />
+        <Products productData={productData} />
         <ConnectWithArtists />
         <Testimonials />
       </div>
