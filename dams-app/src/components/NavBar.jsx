@@ -54,19 +54,21 @@ function NavBar({ cartItem }) {
               <FaUserAlt onClick={handleShowUser} className="nav-icon" />
               <div className="nested-icon">
                 {showUser && (
-                  <ul className="nested-icon-list">
+                  <ul className="nested-icon-list" onClick={handleShowUser}>
                     <li>
                       <Link to="/register">signup </Link>
                     </li>
-                    <li>
-                      {token ? (
+                    {token ? (
+                      <li>
                         <Link to="/login" onClick={removeToken}>
                           logout
                         </Link>
-                      ) : (
+                      </li>
+                    ) : (
+                      <li>
                         <Link to="/login">login</Link>
-                      )}
-                    </li>
+                      </li>
+                    )}
                   </ul>
                 )}
               </div>

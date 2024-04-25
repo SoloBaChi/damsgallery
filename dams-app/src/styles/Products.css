@@ -11,7 +11,14 @@
   background: rgba(242, 247, 251, 1);
   padding: 1.6rem;
 }
-
+.product-section .card-header.img-container {
+  /* display: inline-block; */
+  /* height: 280px; */
+  /* overflow:hidden; */
+}
+.product-section .card-header.img-container img {
+  /* height: fit-content; */
+}
 .product-section .card-footer {
   color: rgba(236, 42, 42, 1);
   font-weight: 600;

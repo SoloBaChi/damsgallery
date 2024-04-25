@@ -70,8 +70,14 @@
   position: absolute;
   top: 100%;
   right: calc(100% - 1.6rem);
-  background-color: #f3f0eb;
-  z-index: 1020;
+  text-align: center;
+  z-index: 1010;
+  border-radius: 4px;
+  border: 1px solid #cbd8cc;
+  background: #fff;
+  /* padding: 1rem; */
+}
+.nav-section .dropdown-menu {
 }
 
 /* ===============cart styles========== */
