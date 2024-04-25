@@ -10,7 +10,7 @@ function AdminUpload(props) {
     description: "",
     price: "",
   });
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [img, setImg] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -52,9 +52,11 @@ function AdminUpload(props) {
   // Hnadle Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      setLoading(true);
 
+    // turn on the loading effect
+    setLoading(true);
+
+    try {
       const imgSrc = await fileUpload();
       const data = {
         title: details.title,
@@ -157,8 +159,6 @@ function AdminUpload(props) {
         <div className="cta-btn">
           <button>
             {loading ? (
-              "Upload"
-            ) : (
               <ThreeDots
                 visible={true}
                 height="20"
@@ -169,6 +169,8 @@ function AdminUpload(props) {
                 wrapperStyle={{}}
                 wrapperClass=""
               />
+            ) : (
+              "Upload"
             )}
           </button>
         </div>
