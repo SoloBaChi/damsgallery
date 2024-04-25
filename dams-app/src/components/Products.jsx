@@ -1,22 +1,22 @@
 import React from "react";
 import SeeMore from "./SeeMore";
 import { useNavigate } from "react-router-dom";
-import { ProductsData } from "./shared/data/data";
+// import { ProductsData } from "./shared/data/data";
 import ProductCard from "./shared/ProductCard";
 
 // import "../styles/Products.css";
-function Products(props) {
+function Products({ productData }) {
   const navigate = useNavigate();
   return (
     <section className="product-section">
       <h6 className="section-title">Explore</h6>
       <h2>our products</h2>
       <div className="flex-container-4">
-        {ProductsData.map((product) => (
+        {productData.map((product) => (
           <div
-            key={product.id}
+            key={product._id}
             onClick={() => {
-              navigate(`/products/${product.id}`);
+              navigate(`/products/${product._id}`);
             }}
           >
             <ProductCard {...product} />

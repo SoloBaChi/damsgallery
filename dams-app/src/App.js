@@ -7,6 +7,17 @@ function App() {
   //SOme Functionality were done here which is the root top most component
   // steps
   // fetch the data from the database
+  //========GET THE PRODUCTS DATA=======
+  const [productData, setProductData] = useState([]);
+  const fetchProductData = async (url) => {
+    const res = await fetch(url);
+    const resObj = await res.json();
+    // console.log(resObj);
+    setProductData(resObj.data);
+  };
+  useEffect(() => {
+    fetchProductData(`https://dams-gallery-api.vercel.app/api/v1/all-products`);
+  }, []);
 
   // process with the  cart details
   const [cartItem, setCartItem] = useState(handleCartItems());
@@ -76,6 +87,7 @@ function App() {
         removeFromCart={removeFromCart}
         decreasQuantity={decreasQuantity}
         cartItem={cartItem}
+        productData={productData}
       />
     </div>
   );

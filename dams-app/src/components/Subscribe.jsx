@@ -11,7 +11,7 @@ function Subscribe(props) {
         <div className="flex-item">
           <form>
             <div className="form-field">
-              <input type="email" placeholder="Enter Email Address" />
+              <input type="email" placeholder="Enter Email Address" required />
               <div className="cta-btn">
                 <button>get listed</button>
               </div>

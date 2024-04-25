@@ -13,15 +13,23 @@ import Footer from "./Footer";
 import Cart from "./Cart";
 import SearchPage from "./SearchPage";
 import SuccessfulRegistration from "./SuccessfulRegistration";
-import Dashborad from "./Dashborad";
+import Dashborad from "./Dashboard";
 import AccountVerification from "./AccountVerification";
 import AdminUpload from "./AdminUpload";
 import SuccessActivation from "./SucessActivation";
 import Products from "./Products";
 import DisplayProduct from "./DisplayProduct";
-import { ProductsData } from "./shared/data/data";
+import SucessfulUpload from "./SucessfulUpload";
+// import { ProductsData } from "./shared/data/data";
+// import SucessfulUpload from "./SucessfulUpload";
 
-const Main = ({ addToCart, removeFromCart, decreaseQuantity, cartItem }) => {
+const Main = ({
+  addToCart,
+  removeFromCart,
+  decreaseQuantity,
+  cartItem,
+  productData,
+}) => {
   const token = localStorage.getItem("authToken");
   // console.log(`Home: token ${token}`);
   return (
@@ -31,9 +39,12 @@ const Main = ({ addToCart, removeFromCart, decreaseQuantity, cartItem }) => {
         <Routes>
           <Route
             path="/"
-            element={<Home data={ProductsData} cartItem={cartItem} />}
+            element={<Home productData={productData} cartItem={cartItem} />}
           />
-          <Route path="products" element={<Products />} />
+          <Route
+            path="products"
+            element={<Products productData={productData} />}
+          />
           <Route
             path="/products/:productId"
             element={
@@ -41,12 +52,13 @@ const Main = ({ addToCart, removeFromCart, decreaseQuantity, cartItem }) => {
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
                 decreaseQuantity={decreaseQuantity}
+                productData={productData}
               />
             }
           />
           <Route
             path="/artworks"
-            element={<ArtWork artWorks={ProductsData} />}
+            element={<ArtWork productData={productData} />}
           />
           <Route path="/artists" element={<Artists />} />
           <Route path="/contactus" element={<ContactUs />} />
@@ -66,7 +78,8 @@ const Main = ({ addToCart, removeFromCart, decreaseQuantity, cartItem }) => {
           />
           {/* <Route path=":activationId" ele/> */}
           <Route path="/dashboard" element={<Dashborad />} />
-          <Route path="/upload-details" element={<AdminUpload />} />
+          <Route path="/admin/upload-products" element={<AdminUpload />} />
+          <Route path="/upload-successful" element={<SucessfulUpload />} />
         </Routes>
         <Subscribe />
         <Footer />

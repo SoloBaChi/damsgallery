@@ -42,6 +42,67 @@
   font-weight: 700;
 }
 
+/* ADMIN UPLOAD STYLES */
+.admin-upload .form-field label[for="photo"] {
+  position: relative;
+  padding: 0.75rem;
+  border-radius: 5px;
+  transition: 0.5s;
+  box-shadow: 0px 5px 0px 0px #000;
+  background-color: #ef5533;
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.admin-upload .form-field label[for="photo"]:active {
+  box-shadow: 0px 0px 0px 0px #000;
+  transform: translateY(5px);
+}
+.admin-upload .cta-btn button {
+  background: transparent;
+  color: #000;
+  border: 1px solid #ef5533;
+}
+.admin-upload .form-field input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* ===============upload successful styles======= */
+.successful-upload {
+  display: flex;
+}
+.successful-upload .cta-btn {
+  background: #3c3cef;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.successful-upload .cta-btn.yes {
+  background: #ef5533;
+}
+.successful-upload .upload-card {
+  margin: auto;
+  /* flex-basis: 48%; */
+  padding: 1rem;
+  box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+}
+.successful-upload .upload-card .flex-container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+.successful-upload .upload-card .flex-container-2 > * {
+  flex-basis: auto;
+  margin-bottom: 0;
+}
+
 /* DESKTOP DEVICE */
 @media (min-width: 980px) {
   .auth-section form button {
